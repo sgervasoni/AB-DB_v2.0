@@ -1,0 +1,4 @@
+# The files included in the QSAR folder are needed to compute the descriptors of the Entry Rules:
+# GOLB, PBF, RB, Primary amine
+
+# The descriptors are computed with the python script calc_props.py, and extracted with the bash script gen-entry-rules.sh
