@@ -1,6 +1,8 @@
 #! /bin/bash
 
-drug=$(ls *_solv.parm7 | awk 'BEGIN{FS="_solv"}{print $1}')
+# File names are consistent with those presented in AB-DB v2.0
+# Please insert the compound name
+drug=INSERT_COMPOUND_NAME
 
 TOP=${drug}_solv.parm7
 ANNEAL=anneal.nc
@@ -9,7 +11,7 @@ EQ=equilibrate_NPT.nc
 TRAJ=md_NPT.nc
 IMAGED=md_imaged_skip1.nc
 
-#atoms for centering needs to be changed accordingly
+# Atoms for centering need to be changed accordingly
 cat > cpptraj_image.in <<EOF
 parm   ${drug}_solv.parm7 [topsolv]
 trajin ${ANNEAL} parm [topsolv]
