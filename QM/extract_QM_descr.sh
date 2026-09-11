@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Extraction of QM descriptors from the Gaussian output (mol.log)
+# The polarizability is computed with the python script g16_polar_p3.py
+
 # DFT energy
 DFT=$(grep "SCF Done" mol.log | awk '{print $5}')
 # HOMO & LUMO
@@ -15,7 +18,7 @@ gap=$(echo $lumo $homo | awk '{print $1 - $2}')
 # Dipole moment
 dipole=$(grep " X= " mol.log | awk '{print $8}')
 # Compute polarizability
-python g09_polar_p3.py mol.log > pol.txt	
+python g16_polar_p3.py mol.log > pol.txt	
 # Isotropic polarizability
 isopol=$(awk '{print $2}' pol.txt)
 # Anisotropic polarizability
