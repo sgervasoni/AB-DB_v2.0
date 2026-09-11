@@ -1,4 +1,8 @@
-# The files included in the QSAR folder are needed to compute the descriptors of the Entry Rules:
+# The file included in the QSAR folder is needed to compute the descriptors of the Entry Rules:
 # GOLB, PBF, RB, Primary amine
 
-# The descriptors are computed with the python script calc_props.py, and extracted with the bash script gen-entry-rules.sh
+# The descriptors are computed with the python script calc_props.py, that needs a SMILES file as input
+# To launch the script:
+python calc_props.py -b opt.smi
+
+# The opt.smi file is the SMILES file of the compound
