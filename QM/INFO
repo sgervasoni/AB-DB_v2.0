@@ -1,0 +1,6 @@
+# The files included in the QM folder are needed to extract and compute the following descriptors:
+# QM_ENE, HOMO, LUMO, GAP, DIP, POL_ISO, POL_ANI, ROT_A, ROT_B, ROT_C, E_TH, CV, S
+
+# The polarizability descriptors are computed with the python script g16_polar_p3.py, that needs the Gaussian output file as input
+
+# The scripts need the Gaussian output file mol.log
