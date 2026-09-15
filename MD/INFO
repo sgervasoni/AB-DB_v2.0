@@ -9,4 +9,6 @@ First, the users have to execute the .sh scripts from 1- to 8-:
 5-watershell: generates the solvation files for computing the solvation shell
 6-hbonds: computes the hydrogen bond files for computing the hydrogen bond descriptors
 7-cluster: generates the conformational clusters of the drug molecules
-8-plumed-gromacs: computes 
+8-plumed-gromacs: computes the RMSF, the asphericity, acylindricity, and kappa2 descriptors (it needs the plumed.inp input file)
+
+After executing all the scripts, the users can use extract_MD_descr.sh file, to extract all MD descriptors.
