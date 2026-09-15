@@ -5,7 +5,7 @@ TOP=${drug}_solv.parm7
 IMAGED=md_imaged_skip1.nc
 IMAGED_SOLUTE=${drug}_imaged_skip1.nc
 
-#atoms to be centered needs to be changed accordingly
+# Atoms to be centered needs to be changed accordingly
 cat > cpptraj_save.in <<EOF
 parm ${drug}_solv.parm7 [topsolv]
 trajin ${IMAGED} parm [topsolv] 
