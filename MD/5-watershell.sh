@@ -1,6 +1,9 @@
 #! /bin/bash
 
-drug=$(ls *_solv.parm7 | awk 'BEGIN{FS="_solv"}{print $1}')
+# File names are consistent with those presented in AB-DB v2.0
+# Please insert the compound name
+drug=INSERT_COMPOUND_NAME
+
 TOP=${drug}_solv.parm7
 IMAGED=md_imaged_skip1.nc
 
