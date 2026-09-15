@@ -1,0 +1,12 @@
+The files in the MD folder are needed to compute the MD descriptors.
+Dependencies: Amber, Gromacs, Plumed
+
+First, the users have to execute the .sh scripts from 1- to 8-:
+1-image_from_dcd_drug: creates a new trajectory file including the pre-production and production steps
+2-save_drug: creates a trajectory file containing only the centered and aligned drug molecule
+3-extract_average: extracts the average structure of the ligand from the imaged trajectory
+4-extract_clos_to_avg: extracts the conformation closest to average structure of the ligand from the imaged trajectory
+5-watershell: generates the solvation files for computing the solvation shell
+6-hbonds: computes the hydrogen bond files for computing the hydrogen bond descriptors
+7-cluster: generates the conformational clusters of the drug molecules
+8-plumed-gromacs: computes 
